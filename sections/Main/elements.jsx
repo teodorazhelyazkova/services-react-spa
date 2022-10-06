@@ -39,7 +39,6 @@ export const StyledTextContainer = styled(({ ...props }) => (
 export const StyledServicesContainer = styled(({ ...props }) => (
   <SectionContainer {...props} />
 ))`
-  display: flex;
   flex-direction: column;
   gap: 4rem;
   width: min(1100px, 85%);
