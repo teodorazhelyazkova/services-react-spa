@@ -1,17 +1,30 @@
+import { loadGetInitialProps } from "next/dist/shared/lib/utils";
 import Image from "next/image";
 
-export const Card = ({ image, title, description }) => {
+import {
+  StyledTitle,
+  StyledDescription,
+  StyledIconContainer,
+  StyledCardContainer,
+  StyledTextContainer,
+} from "./elements";
+
+export const Card = ({ image, title, description, position }) => {
   return (
-    <div>
-      <Image
-        layout="responsive"
-        src={image.src}
-        alt={image.alt}
-        width={image.width}
-        height={image.height}
-      />
-      <h2>{title}</h2>
-      <p>{description}</p>
-    </div>
+    <StyledCardContainer position={position}>
+      <StyledIconContainer>
+        <Image
+          layout="intrinsic"
+          src={image.src}
+          alt={image.alt}
+          width={image.width}
+          height={image.height}
+        />
+      </StyledIconContainer>
+      <StyledTextContainer>
+        <StyledTitle>{title}</StyledTitle>
+        <StyledDescription>{description}</StyledDescription>
+      </StyledTextContainer>
+    </StyledCardContainer>
   );
 };

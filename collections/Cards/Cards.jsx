@@ -1,10 +1,13 @@
 import { Card } from "../Card";
+
+import { StyledCardsContainer } from "./elements";
+
 export const Cards = (props) => {
   return (
-    <div>
+    <StyledCardsContainer>
       {props.cardsData.map((card, index) => (
-        <Card key={index} {...card} />
+        <Card key={index} {...card} position={index} />
       ))}
-    </div>
+    </StyledCardsContainer>
   );
 };
