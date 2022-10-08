@@ -9,7 +9,7 @@ import {
   StyledTextContainer,
 } from "./elements";
 
-export const Card = ({ image, title, description, position }) => {
+export const Card = ({ image, title, description, position, ...props }) => {
   return (
     <StyledCardContainer position={position}>
       <StyledIconContainer>

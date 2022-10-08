@@ -10,8 +10,8 @@ import {
   StyledContainer,
 } from "./elements";
 
-export const Main = ({ image, title, description, cardsData }) => {
-  console.log(cardsData)
+export const Main = ({ image, title, description, cardsData, ...props }) => {
+ 
   return (
     <StyledContainer>
       <StyledTextContainer>
