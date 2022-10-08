@@ -10,37 +10,8 @@ import {
   StyledContainer,
 } from "./elements";
 
-const cardsData = [
-  {
-    image: { src: "/img/sampleIcon.svg", alt: "", width: 50, height: 50 },
-    title: "Brief",
-    description: [
-      "Complete ",
-      <strong key="">brief writing or simple guidance</strong>,
-      " on what to include, we've got you covered.",
-    ],
-  },
-  {
-    image: { src: "/img/sampleIcon.svg", alt: "", width: 50, height: 50 },
-    title: "Search",
-    description: [
-      "In-depth agency search covering: ",
-      <strong key="">criteria matching</strong>,
-      " door knocking and due-dilligence vetting.",
-    ],
-  },
-  {
-    image: { src: "/img/sampleIcon.svg", alt: "", width: 50, height: 50 },
-    title: "Pitch",
-    description: [
-      "Comprehensive ",
-      <strong key="">pitch management</strong>,
-      " including comms, diary management and pitch hosting.",
-    ],
-  },
-];
-
-export const Main = ({ image, title, description }) => {
+export const Main = ({ image, title, description, cardsData }) => {
+  console.log(cardsData)
   return (
     <StyledContainer>
       <StyledTextContainer>
